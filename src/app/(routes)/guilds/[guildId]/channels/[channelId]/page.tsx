@@ -38,7 +38,7 @@ const getChannel = async (channelId: string) => {
         include: {
             messages: {
                 orderBy: {
-                    createdAt: 'desc'
+                    createdAt: 'asc'
                 },
                 include: {
                     author: {
