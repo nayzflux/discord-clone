@@ -32,7 +32,7 @@ const ChatMessage = ({initialMessages}: {initialMessages: any[]}) => {
     return (
         <div>
             {incomingMessages?.map((message: any) => (
-                <Message message={message}/>
+                <Message key={message.id} message={message}/>
             ))}
         </div>
     );

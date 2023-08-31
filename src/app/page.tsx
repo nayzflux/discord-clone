@@ -40,7 +40,7 @@ const Page = async () => {
         );
     }
 
-    return redirect(`/${guild.id}/${guild.channels[0].id}`);
+    return redirect(`/guilds/${guild.id}/channels/${guild.channels[0].id}`);
 };
 
 export default Page;

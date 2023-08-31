@@ -31,7 +31,7 @@ const Page = async ({params}: {params: Params}) => {
     }
 
     if (guild.members.find(m => m.userId === session.user.id)) {
-        return redirect(`/${guild.id}/${guild.channels[0].id}`)
+        return redirect(`/guilds/${guild.id}/channels/${guild.channels[0].id}`)
     }
 
     const updatedGuild = await prisma.guild.update({
@@ -47,7 +47,7 @@ const Page = async ({params}: {params: Params}) => {
         }
     });
 
-    return redirect(`/${guild.id}/${guild.channels[0].id}`);
+    return redirect(`/guilds/${guild.id}/channels/${guild.channels[0].id}`);
 };
 
 export default Page;
