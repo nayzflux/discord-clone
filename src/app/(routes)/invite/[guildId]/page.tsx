@@ -6,6 +6,8 @@ import {prisma} from "@/lib/prisma";
 import {Params} from "next/dist/shared/lib/router/utils/route-matcher";
 import NotFound from "@/components/NotFound";
 
+export const dynamic = "force-dynamic";
+
 const Page = async ({params}: {params: Params}) => {
     const session = await getServerSession(authOptions);
 

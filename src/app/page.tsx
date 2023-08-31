@@ -7,6 +7,8 @@ import NotFound from "@/components/NotFound";
 import {Params} from "next/dist/shared/lib/router/utils/route-matcher";
 import NoGuild from "@/components/NoGuild";
 
+export const dynamic = "force-dynamic";
+
 const Page = async () => {
     const session = await getServerSession(authOptions);
 

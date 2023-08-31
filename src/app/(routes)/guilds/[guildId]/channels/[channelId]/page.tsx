@@ -7,6 +7,8 @@ import {authOptions} from "@/app/api/auth/[...nextauth]/route";
 import {redirect} from "next/navigation";
 import NotFound from "@/components/NotFound";
 
+export const dynamic = "force-dynamic";
+
 const getGuild = async (guildId: string) => {
     const guild = await prisma.guild.findUnique({
         where: {

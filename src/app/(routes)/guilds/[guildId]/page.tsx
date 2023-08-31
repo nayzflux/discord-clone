@@ -5,6 +5,8 @@ import {prisma} from "@/lib/prisma";
 import NotFound from "@/components/NotFound";
 import {authOptions} from "@/app/api/auth/[...nextauth]/route";
 
+export const dynamic = "force-dynamic";
+
 const ServerIdPage = async ({params}: {params: Params}) => {
     const session = await getServerSession(authOptions);
 
