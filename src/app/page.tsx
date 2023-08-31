@@ -32,7 +32,7 @@ const Page = async () => {
         }
     });
 
-    const guild = user?.guilds[0].guild
+    const guild = user?.guilds[0]?.guild
 
     if (!guild) {
         return (
