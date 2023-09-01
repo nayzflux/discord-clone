@@ -2,7 +2,7 @@
 
 import React from 'react';
 import useCreateGuildModal from "@/hooks/useCreateGuildModal";
-import {AiOutlinePlus, AiOutlinePlusCircle} from "react-icons/ai";
+import {AiOutlinePlus} from "react-icons/ai";
 
 const CreateGuildButton = () => {
     const {setOpen} = useCreateGuildModal();

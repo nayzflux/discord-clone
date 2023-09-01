@@ -10,7 +10,7 @@ import NotFound from "@/components/NotFound";
 export const dynamic = "force-dynamic";
 
 const getGuild = async (guildId: string) => {
-    const guild = await prisma.guild.findUnique({
+    return prisma.guild.findUnique({
         where: {
             id: guildId,
         },
@@ -33,11 +33,10 @@ const getGuild = async (guildId: string) => {
             }
         }
     });
-    return guild
 }
 
 const getChannel = async (channelId: string) => {
-    const channel = await prisma.channel.findUnique({
+    return prisma.channel.findUnique({
         where: {
             id: channelId,
         },
@@ -59,7 +58,6 @@ const getChannel = async (channelId: string) => {
             }
         }
     });
-    return channel
 }
 
 const GuildChannelPage = async ({params}: {params: Params}) => {
