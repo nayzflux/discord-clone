@@ -13,8 +13,8 @@ const User = async () => {
     const user = session.user
 
     return (
-        <div className="flex mt-auto items-center bg-discord-gray-4 p-4">
-            <Avatar user={user}/>
+        <div className="flex mt-auto items-center bg-discord-gray-4 p-4 gap-3">
+            <Avatar className="w-10 h-10" user={user}/>
 
             <p>{user.name}</p>
 

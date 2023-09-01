@@ -17,7 +17,13 @@ const getGuild = async (guildId: string) => {
         include: {
             members: {
                 include: {
-                    user: true
+                    user: {
+                        select: {
+                            id: true,
+                            name: true,
+                            image: true
+                        }
+                    }
                 }
             },
             channels: {

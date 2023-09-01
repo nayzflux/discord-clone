@@ -2,7 +2,7 @@
 
 import React, {useState} from 'react';
 import useCreateChannelModal from "@/hooks/useCreateChannelModal";
-import IconButton from "@/components/IconButton";
+import IconButton from "@/components/buttons/IconButton";
 import {AiOutlineClose} from "react-icons/ai";
 import axios from "axios";
 import {useParams, useRouter} from "next/navigation";

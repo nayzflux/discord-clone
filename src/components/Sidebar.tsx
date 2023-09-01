@@ -3,7 +3,7 @@ import GuildIcon from "@/components/GuildIcon";
 import {prisma} from "@/lib/prisma";
 import {getServerSession} from "next-auth";
 import {authOptions} from "@/app/api/auth/[...nextauth]/route";
-import CreateGuildButton from "@/components/CreateGuildButton";
+import CreateGuildButton from "@/components/buttons/CreateGuildButton";
 
 const Sidebar = async () => {
     const session = await getServerSession(authOptions);

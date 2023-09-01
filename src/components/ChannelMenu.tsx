@@ -1,7 +1,7 @@
 import React from 'react';
 import Channel from "@/components/Channel";
 import User from "@/components/User";
-import CreateChannelButton from "@/components/CreateChannelButton";
+import CreateChannelButton from "@/components/buttons/CreateChannelButton";
 
 const ChannelMenu = ({channels, guild}: {channels: any[], guild: any}) => {
 

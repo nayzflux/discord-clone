@@ -1,10 +1,11 @@
 import React from 'react';
 import ChannelName from "@/components/ChannelName";
-import IconButton from "@/components/IconButton";
+import IconButton from "@/components/buttons/IconButton";
 import {FaHashtag} from "react-icons/fa6";
 import {BsBellSlashFill, BsFillPinAngleFill} from "react-icons/bs";
 import {BiSolidGroup, BiSolidHelpCircle, BiSolidInbox} from "react-icons/bi";
 import SearchBar from "@/components/SearchBar";
+import MemberListButton from "@/components/buttons/MemberListButton";
 
 const ChannelHeader = ({channel}: {channel: any}) => {
     return (
@@ -15,7 +16,7 @@ const ChannelHeader = ({channel}: {channel: any}) => {
                 <IconButton icon={FaHashtag}/>
                 <IconButton icon={BsBellSlashFill}/>
                 <IconButton icon={BsFillPinAngleFill}/>
-                <IconButton icon={BiSolidGroup}/>
+                <MemberListButton/>
 
                 <SearchBar/>
 
