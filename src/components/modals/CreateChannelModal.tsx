@@ -10,6 +10,7 @@ import Modal from "@/components/modals/Modal";
 
 const CreateChannelModal = () => {
     const [name, setName] = useState('');
+    const [type, setType] = useState('TEXT');
     const {open, setOpen} = useCreateChannelModal();
     const params = useParams();
     const router = useRouter();
@@ -21,7 +22,7 @@ const CreateChannelModal = () => {
 
         axios.post(`/api/guilds/${params.guildId}/channels`, {
             name,
-            type: "TEXT"
+            type
         }).then(() => {
             console.log('Posted')
             router.refresh()
@@ -45,6 +46,18 @@ const CreateChannelModal = () => {
                 </div>
 
                 <form className="flex flex-col gap-2">
+                    <div className="flex flex-col">
+                        <div className="flex">
+                            <input type="checkbox" checked={type === "TEXT"} onChange={() => setType('TEXT')}/>
+                            <label>Text</label>
+                        </div>
+
+                        <div className="flex">
+                            <input type="checkbox"  checked={type === "VOICE"} onChange={() => setType('VOICE')}/>
+                            <label>Voice</label>
+                        </div>
+                    </div>
+
                     <label className="font-bold uppercase">Channel name</label>
                     <input className="bg-discord-gray-4" value={name} onChange={(e) => setName(e.target.value)}/>
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import ChannelMenu from "@/components/ChannelMenu";
 import ChannelHeader from "@/components/ChannelHeader";
-import MessageInput from "@/components/MessageInput";
-import ChatMessage from "@/components/ChatMessage";
 import MemberList from "@/components/MemberList";
+import TextChannel from "@/components/TextChannel";
+import VoiceChannel from "@/components/VoiceChannel";
 
 const Guild = async ({guild, channel}: {guild: any, channel: any}) => {
     return (
@@ -14,13 +14,7 @@ const Guild = async ({guild, channel}: {guild: any, channel: any}) => {
                 <ChannelHeader channel={channel}/>
 
                 <div className="flex flex-grow overflow-hidden">
-                    <div className="flex flex-col flex-grow">
-                        <div className="flex flex-grow overflow-auto flex-col-reverse">
-                            <ChatMessage initialMessages={channel.messages}/>
-                        </div>
-
-                        <MessageInput/>
-                    </div>
+                    {channel.type === "TEXT" ? <TextChannel channel={channel}/> : <VoiceChannel channel={channel}/>}
 
                     <MemberList members={guild.members}/>
                 </div>
